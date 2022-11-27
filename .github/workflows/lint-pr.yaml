@@ -1,0 +1,38 @@
+---
+name: lint-pr
+
+on:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  buf:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - uses: bufbuild/buf-setup-action@v1
+        with:
+          version: v1.9.0
+          github_token: ${{ github.token }}
+      - uses: bufbuild/buf-lint-action@v1
+        with:
+          input: proto/internal
+
+  buf-breaking:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - uses: bufbuild/buf-setup-action@v1
+        with:
+          version: v1.9.0
+          github_token: ${{ github.token }}
+      - uses: bufbuild/buf-breaking-action@v1
+        with:
+          input: proto/internal
+          against: https://github.com/$GITHUB_REPOSITORY.git#branch=main,ref=HEAD~1,subdir=proto/internal

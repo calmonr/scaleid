@@ -1,0 +1,18 @@
+---
+log-level: debug
+
+path:
+  plugin: /path/to/plugins
+
+grpc-server:
+  address: :50052
+  network: udp
+  tls:
+    enabled: true
+    cert-path: /path/to/cert
+    key-path: /path/to/key
+    client-ca-path: /path/to/clientca
+
+plugin:
+  shared:
+    enabled: true

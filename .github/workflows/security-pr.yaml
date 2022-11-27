@@ -1,0 +1,19 @@
+---
+name: security-pr
+
+on:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  dependency-review:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - uses: actions/dependency-review-action@v3
+        with:
+          allow-licenses: Apache-2.0, BSD-3-Clause, BSD-2-Clause, MIT, MPL-2.0

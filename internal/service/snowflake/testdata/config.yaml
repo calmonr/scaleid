@@ -1,0 +1,6 @@
+---
+plugin:
+  internal:
+    snowflake:
+      datacenter-id: 2
+      worker-id: 2

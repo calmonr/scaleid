@@ -1,0 +1,5 @@
+---
+ignore:
+  - pkg/**/*.pb.go
+  - internal/grpctest/*.go
+  - internal/unittest/*.go

@@ -1,0 +1,23 @@
+---
+log-level: info
+
+path:
+  plugin:
+
+grpc-server:
+  address: :50051
+  network: tcp
+  tls:
+    enabled: false
+    cert-path:
+    key-path:
+    client-ca-path:
+
+plugin:
+  internal:
+    snowflake:
+      datacenter-id: 1
+      worker-id: 1
+
+  shared:
+    enabled: false

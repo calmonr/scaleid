@@ -1,0 +1,3 @@
+* -text
+*.pb.go -diff linguist-generated
+proto/buf.lock -diff linguist-generated

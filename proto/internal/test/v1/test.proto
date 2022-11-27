@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package test.v1;
+
+option go_package = "github.com/calmonr/scaleid/pkg/proto/test/v1";
+
+service TestService {
+  rpc Test(TestRequest) returns (TestResponse);
+}
+
+message TestRequest {}
+
+message TestResponse {}

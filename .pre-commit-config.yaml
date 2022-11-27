@@ -1,0 +1,12 @@
+---
+repos:
+  - repo: https://github.com/golangci/golangci-lint
+    rev: v1.50.0
+    hooks:
+      - id: golangci-lint
+  - repo: https://github.com/zricethezav/gitleaks
+    rev: v8.14.1
+    hooks:
+      - id: gitleaks
+default_install_hook_types: [pre-commit]
+minimum_pre_commit_version: 2.20.0

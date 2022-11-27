@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package snowflake.v1;
+
+option go_package = "github.com/calmonr/scaleid/pkg/proto/snowflake/v1";
+
+service SnowflakeService {
+  rpc GenerateID(GenerateIDRequest) returns (GenerateIDResponse);
+}
+
+message GenerateIDRequest {}
+
+message GenerateIDResponse {
+  uint64 id = 1;
+}
