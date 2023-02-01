@@ -9,7 +9,7 @@ require (
 	github.com/stretchr/testify v1.8.1
 	go.uber.org/zap v1.24.0
 	golang.org/x/sync v0.1.0
-	google.golang.org/grpc v1.51.0
+	google.golang.org/grpc v1.52.3
 	google.golang.org/protobuf v1.28.1
 )
 
@@ -30,10 +30,10 @@ require (
 	github.com/subosito/gotenv v1.4.1 // indirect
 	go.uber.org/atomic v1.9.0 // indirect
 	go.uber.org/multierr v1.8.0 // indirect
-	golang.org/x/net v0.0.0-20221014081412-f15817d10f9b // indirect
-	golang.org/x/sys v0.0.0-20220908164124-27713097b956 // indirect
-	golang.org/x/text v0.4.0 // indirect
-	google.golang.org/genproto v0.0.0-20221024183307-1bc688fe9f3e // indirect
+	golang.org/x/net v0.4.0 // indirect
+	golang.org/x/sys v0.3.0 // indirect
+	golang.org/x/text v0.5.0 // indirect
+	google.golang.org/genproto v0.0.0-20221118155620-16455021b5e6 // indirect
 	gopkg.in/ini.v1 v1.67.0 // indirect
 	gopkg.in/yaml.v2 v2.4.0 // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect
